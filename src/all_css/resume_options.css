@@ -1,0 +1,51 @@
+.resume-options-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.options-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.option-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 40px 30px;
+  width: 250px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.option-card h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.option-card p {
+  color: #555;
+}
+.option-card h2,
+.option-card p {
+  background: linear-gradient(270deg, #91d2f0, #63c3e5, #91d2f0); /* light Ashok Chakra gradient */
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 6s ease infinite;
+  display: inline-block; /* ensures gradient applies correctly */
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

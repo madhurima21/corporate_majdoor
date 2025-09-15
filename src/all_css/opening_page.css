@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fff; /* White base of Indian flag */
+  color: #333;
+  line-height: 1.6;
+  animation: gradientBackground 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Animated gradient background to reflect Indian tricolor */
+@keyframes gradientBackground {
+  0% {background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);}
+  50% {background: linear-gradient(90deg, #138808, #FFFFFF, #FF9933);}
+  100% {background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);}
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FF9933; /* Saffron */
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #138808; /* Green */
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #0056b3; /* Dark Blue */
+}
+
+/* Carousel */
+.carousel {
+  margin-top: 90px;
+}
+
+.carousel .slide {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  animation: zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.95); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.carousel .internship {
+  background-image: linear-gradient(rgba(255, 153, 51, 0.5), rgba(255, 153, 51, 0.7)), url("https://source.unsplash.com/1600x900/?office,internship");
+}
+
+.carousel .course {
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("https://source.unsplash.com/1600x900/?education,course");
+  color: #000;
+}
+
+.carousel .resume {
+  background-image: linear-gradient(rgba(19,136,8,0.5), rgba(19,136,8,0.7)), url("https://source.unsplash.com/1600x900/?resume,career");
+}
+
+/* Animated Text */
+.animated-text {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+  color: #111;
+}
+
+.animated-text p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.animated-text p:nth-child(1) { animation-delay: 0.5s; }
+.animated-text p:nth-child(2) { animation-delay: 2s; }
+.animated-text p:nth-child(3) { animation-delay: 3.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background: #1a1a2e; /* Deep navy for contrast with body */
+  color: #fff; /* White text */
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 5px solid #FF9933; /* Saffron top border */
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+footer .social a {
+  color: #FF9933; /* Saffron default */
+  margin-right: 20px;
+  font-size: 28px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer .social a:nth-child(1):hover {
+  color: #138808; /* Green on hover */
+  transform: scale(1.3);
+}
+
+footer .social a:nth-child(2):hover {
+  color: #0056b3; /* Ashoka Chakra blue on hover */
+  transform: scale(1.3);
+}
+
+footer .location {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ccc;
+}
